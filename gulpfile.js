@@ -1,6 +1,7 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var cleanCSS = require('gulp-clean-css');
+var jsmin = require("gulp-jsmin");
 
 /* Compile Sass */
 
