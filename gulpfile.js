@@ -16,3 +16,10 @@ gulp.task("minify-css", function() {
   return gulp.src("./css");
   .pipe(gulp.dest("dist"))
 });
+
+gulp.task("minify-js", function(){
+  gulp.src("src/**/*.js");
+  .pipe(jsmin());
+  .pipe(rename({suffix: ".min"}))
+  .pipe(gulp.dest("dist"));
+});
