@@ -3,6 +3,7 @@ var sass = require("gulp-sass");
 var cleanCSS = require('gulp-clean-css');
 var jsmin = require("gulp-jsmin");
 var rename = require("gulp-rename");
+var sourcemaps = reqruie("gulp-sourcemaps");
 
 /* Compile Sass */
 
@@ -15,6 +16,10 @@ gulp.task("sass", function(){
 
 gulp.task("minify-css", function() {
   return gulp.src("./css");
+  .pipe(sourcemaps.init())
+  .pipe("cleanCSS");
+  .pipe(rename({suffix: ".min"}));
+  .pipe(sourcemaps.write());
   .pipe(gulp.dest("dist"));
 });
 
