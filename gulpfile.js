@@ -8,26 +8,27 @@ var sourcemaps = require("gulp-sourcemaps");
 /* Compile Sass */
 
 gulp.task("sass", function(){
-  return gulp.src("./**/.scss");
+  return gulp.src("./**/.scss")
+  .pipe(sourcemaps.init())
+  .pipe(sass())
+  .pipe(sourcemaps.write())
   .pipe(gulp.dest("./css"));
 });
 
 /* Minify CSS */
 
 gulp.task("minify-css", function() {
-  return gulp.src("./css");
-  .pipe(sourcemaps.init())
-  .pipe("cleanCSS");
-  .pipe(rename({suffix: ".min"}));
-  .pipe(sourcemaps.write());
+  return gulp.src("./css")
+  .pipe(cleanCSS())
+  .pipe(rename({suffix: ".min"}))
   .pipe(gulp.dest("dist"));
 });
 
 /* Minify JS */
 
 gulp.task("minify-js", function(){
-  gulp.src("src/**/*.js");
-  .pipe(jsmin());
-  .pipe(rename({suffix: ".min"}));
+  gulp.src("src/**/*.js")
+  .pipe(jsmin())
+  .pipe(rename({suffix: ".min"}))
   .pipe(gulp.dest("dist"));
 });
