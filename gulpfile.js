@@ -9,6 +9,8 @@ gulp.task("sass", function(){
   .pipe(gulp.dest("./css"));
 });
 
+/* Minify CSS */
+
 gulp.task("minify-css", function() {
   return gulp.src("./css");
   .pipe(gulp.dest("dist"))
