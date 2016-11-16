@@ -3,7 +3,7 @@ var sass = require("gulp-sass");
 var cleanCSS = require('gulp-clean-css');
 var jsmin = require("gulp-jsmin");
 var rename = require("gulp-rename");
-var sourcemaps = reqruie("gulp-sourcemaps");
+var sourcemaps = require("gulp-sourcemaps");
 
 /* Compile Sass */
 
