@@ -15,7 +15,7 @@ gulp.task("sass", function(){
 
 gulp.task("minify-css", function() {
   return gulp.src("./css");
-  .pipe(gulp.dest("dist"))
+  .pipe(gulp.dest("dist"));
 });
 
 /* Minify JS */
@@ -23,6 +23,6 @@ gulp.task("minify-css", function() {
 gulp.task("minify-js", function(){
   gulp.src("src/**/*.js");
   .pipe(jsmin());
-  .pipe(rename({suffix: ".min"}))
+  .pipe(rename({suffix: ".min"}));
   .pipe(gulp.dest("dist"));
 });
