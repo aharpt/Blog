@@ -18,6 +18,8 @@ gulp.task("minify-css", function() {
   .pipe(gulp.dest("dist"))
 });
 
+/* Minify JS */
+
 gulp.task("minify-js", function(){
   gulp.src("src/**/*.js");
   .pipe(jsmin());
