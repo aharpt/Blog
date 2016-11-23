@@ -12,3 +12,38 @@ div(style="padding: 0;").grid-block.shrink.wrap
         a(href="#") Contact
       li
         a(href="#") Blog
+
+
+
+
+
+
+
+doctype html
+html(lang='en', ng-app='application')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Foundation for Apps
+    link(href='./assets/css/app.css', rel='stylesheet', type='text/css')
+    script(src='./assets/js/foundation.js')
+    script(src='./assets/js/templates.js')
+    script(src='./assets/js/routes.js')
+    script(src='./assets/js/app.js')
+  body
+    .grid-frame.vertical
+      .grid-block.shrink.wrap(style='padding: 0;')
+        .grid-content.collapse.small-12.medium-6
+          ul.primary.menu-bar
+            li
+              a(ui-sref='home', href='#')
+                strong Organic Farms Network
+        .grid-content.collapse.small-12.medium-6
+          ul.primary.menu-bar
+            li
+              a(ui-sref='about', href='#') About
+            li
+              a(ui-sref='contact', href='#') Contact
+            li
+              a(ui-sref='blog', href='#') Blog
+      .grid-content(ui-view='')
