@@ -1,56 +1,14 @@
-nav#mainNav.navbar.navbar-default.navbar-fixed-top
-    .container-fluid
-      // Brand and toggle get grouped for better mobile display
-      .navbar-header
-        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-          span.sr-only Toggle navigation
-          // |
-          span.icon-bar
-          // |
-          span.icon-bar
-          // |
-          span.icon-bar
-        // |
-        a.navbar-brand.page-scroll(href='/') FitLog.io
-      // Collect the nav links, forms, and other content for toggling
-      #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        ul.nav.navbar-nav.navbar-right
-          li
-              a(href='/blog') Blog
-          li
-              a.page-scroll(href='#about') About
-          li
-              a.page-scroll(href='#services') Services
-          // |
-          li
-              a.page-scroll(href='#portfolio') Portfolio
-          // |
-          li
-              a.page-scroll(href='#contact') Contact
-          // /.navbar-collapse
-          // /.container-fluid
-
-.grid-block.shrink.wrap
+div(style="padding: 0;").grid-block.shrink.wrap
   .grid-content.collapse.small-12.medium-6
     ul.primary.menu-bar
       li
         a(href="#")
           strong Organic Farms Network
-
-
-
-          <div class="grid-frame vertical">
-                <div class="grid-block shrink wrap" style="padding: 0;">
-                  <div class="grid-content collapse small-12 medium-6">
-                    <ul class="primary menu-bar">
-                      <li><a ui-sref="home" href="#"><strong>Organic Farms Network</strong></a></li>
-                    </ul>
-                  </div>
-                  <div class="grid-content collapse small-12 medium-6">
-                    <ul class="primary menu-bar">
-                      <li><a ui-sref="about" href="#">About</a></li>
-                      <li><a ui-sref="contact" href="#">Contact</a></li>
-                      <li><a ui-sref="blog" href="#">Blog</a></li>
-                    </ul>
-                  </div>
-                </div>
+  .grid-content.collapse.small-12.medium-6
+    ul.primary.menu-bar
+      li
+        a(href="#") About
+      li
+        a(href="#") Contact
+      li
+        a(href="#") Blog
