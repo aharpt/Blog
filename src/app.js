@@ -5,7 +5,7 @@ var express = require("express"),
 
 var app = express();
 
-app.use();
+app.use("/static", express.static(__dirname + "/public"));
 
 app.set("view engine", "pug");
 app.set("views", __dirname + "/templates");
