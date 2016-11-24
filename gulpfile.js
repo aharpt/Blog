@@ -12,7 +12,7 @@ gulp.task("sass", function(){
   .pipe(sourcemaps.init())
   .pipe(sass())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest("./src/public/css/custom.css"));
+  .pipe(gulp.dest("./src/public/css/"));
 });
 
 /* Minify CSS */
