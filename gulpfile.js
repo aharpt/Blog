@@ -8,11 +8,11 @@ var sourcemaps = require("gulp-sourcemaps");
 /* Compile Sass */
 
 gulp.task("sass", function(){
-  return gulp.src("./**/.scss")
+  return gulp.src("./src/sass/*.scss")
   .pipe(sourcemaps.init())
   .pipe(sass())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest("./css"));
+  .pipe(gulp.dest("./public/css/custom.css"));
 });
 
 /* Minify CSS */
