@@ -22,6 +22,10 @@ app.get("/contact", function(req, res) {
   res.render("contact");
 });
 
+app.get("/blog", function(req, res) {
+  res.render("blog");
+});
+
 app.get("/blog/:title?", function(req, res) {
   var title = req.params.title;
   if (title === undefined) {
