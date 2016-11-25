@@ -14,6 +14,14 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
+app.get("/about", function(req, res) {
+  res.render("about");
+});
+
+app.get("/contact", function(req, res) {
+  res.render("contact");
+});
+
 app.get("/blog/:title?", function(req, res) {
   var title = req.params.title;
   if (title === undefined) {
