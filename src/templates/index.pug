@@ -1,52 +1,66 @@
 extends ./layout.pug
 
 block content
-  .grid-content
+  // Page Header
+  // Set your background image for this header on the line below.
+  header.intro-header(style="background-image: url('/static/img/home-bg.jpg')")
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+          .site-heading
+            h1 Clean Blog
+            hr.small
+            span.subheading A Clean Blog Theme by Start Bootstrap
+  // Main Content
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        .post-preview
+          a(href='post.html')
+          h2.post-title
+          | Man must explore, and this is exploration at its greatest
+          h3.post-subtitle
+          | Problems look mighty small from 150 miles up
+          p.post-meta
+          | Posted by
+          a(href='#') Start Bootstrap
+          |  on September 24, 2014
+      hr
+      .post-preview
+        a(href='post.html')
+          h2.post-title
+            | I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+        p.post-meta
+          | Posted by
+          a(href='#') Start Bootstrap
+          |  on September 18, 2014
+      hr
+      .post-preview
+        a(href='post.html')
+          h2.post-title
+            | Science has not yet mastered prophecy
+          h3.post-subtitle
+            | We predict too much for the next year and yet far too little for the next ten.
+        p.post-meta
+          | Posted by
+          a(href='#') Start Bootstrap
+          |  on August 24, 2014
+      hr
+      .post-preview
+        a(href='post.html')
+          h2.post-title
+            | Failure is not an option
+          h3.post-subtitle
+            | Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+        p.post-meta
+          | Posted by
+          a(href='#') Start Bootstrap
+          |  on July 8, 2014
+      hr
+      // Pager
+      ul.pager
+        li.next
+          a(href='#') Older Posts →
+  hr
 
-
-
-
-
-  .grid-block
-  #sidebar.first.medium-6.show-for-medium.grid-block
-    iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3114.033599546991!2d-95.01139638498266!3d38.694072466509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0a88d067a3673%3A0xa8b135055ef10c07!2s36495+W+239th+St%2C+Edgerton%2C+KS+66021!5e0!3m2!1sen!2sus!4v1476744215351', width='100%', height='auto', frameborder='0', style='border:0', allowfullscreen='')
-  .second.medium-6.grid-block
-    #search.small-12.medium-12.grid-content
-      label
-        span.inline-label
-          input(type='search', placeholder='Search a location or product')
-          a.button(href='#') Search
-    .small-11.medium-12.large-6.grid-content.card-container
-      .card
-        img(src='http://placekitten.com/g/400/200')
-        .card-divider
-          This is a header
-        .card-section
-          h4 Look at This Swag Card
-          p
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.
-    .small-11.medium-12.large-6.grid-content.card-container
-      .card
-        img(src='http://placekitten.com/g/400/200')
-        .card-divider
-           This is a header
-        .card-section
-          h4 Look at This Swag Card
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.
-    .small-11.medium-12.large-6.grid-content.card-container
-    .card
-  .card-section
-    p The most basic elements in the Foundation for Apps grid are the Group and Block.
-
-      .card
-        img(src='http://placekitten.com/g/400/200')
-        .card-divider
-          | This is a header
-        .card-section
-          h4 Look at This Swag Card
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.
-  .login-buttons
-    a.info.button(ui-sref='login', href='') Login
-    a.info.button(ui-sref='signup', href='') Sign Up
+  include ./footer.pug
