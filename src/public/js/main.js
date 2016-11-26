@@ -18,13 +18,14 @@
 $(".form-group button").click(function() {
   if ($("#name").length < 2) {
     $("#name").parent(".form-group").addClass("error-top").append("<p class='text-danger'>Your Name is required</p>");
-    console.log($("#name").length);
+    // console.log($("#name").length);
   }
 });
 
 
 $("#name").keyup(function() {
-  if ($("#name").length > 1) {
+  if ($("input#name").length > 1) {
+    console.log($("input#name").length);
     $(this).parent(".form-group").removeClass("error-top");
     $(this).children(".text-danger").hide();
   }
