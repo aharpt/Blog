@@ -11,19 +11,19 @@ app.set("view engine", "pug");
 app.set("views", __dirname + "/templates");
 
 app.get("/", function(req, res) {
-  res.render("index");
+  res.render("index", {title: "Clean Blog - Home"});
 });
 
 app.get("/about", function(req, res) {
-  res.render("about");
+  res.render("about", {title: "Clean Blog - About"});
 });
 
 app.get("/contact", function(req, res) {
-  res.render("contact");
+  res.render("contact", {title: "Clean Blog - Contact"});
 });
 
 app.get("/post", function(req, res) {
-  res.render("post");
+  res.render("post", {title: "Clean Blog - Post"});
 });
 
 app.get("/blog/:title?", function(req, res) {
