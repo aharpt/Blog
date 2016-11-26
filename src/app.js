@@ -22,8 +22,8 @@ app.get("/contact", function(req, res) {
   res.render("contact");
 });
 
-app.get("/blog", function(req, res) {
-  res.render("blog");
+app.get("/post", function(req, res) {
+  res.render("post");
 });
 
 app.get("/blog/:title?", function(req, res) {
