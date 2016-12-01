@@ -13,11 +13,7 @@
 ##### 2. CSS3
 ##### 3. Sass
 ##### 4. Bootstrap
-##### 5. Angularjs
 
 ### Back End
 ##### 1. Express.js
 ##### 2. Node.js
-
-### Database
-##### 1. Mongodb
