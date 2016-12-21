@@ -1,8 +1,8 @@
 # Blog
 
 ## Setup
-### 1. Clone from Bitbucket
-###### 1. Run "git clone https://aaron_harpt@bitbucket.org/aaron_harpt/blog.git"
+### 1. Clone from Github
+###### 1. Run "git clone https://github.com/aharpt/Blog.git"
 ### 2. Install node dependancies
 ###### 1. Run "npm install" at the root directory of your project
 
