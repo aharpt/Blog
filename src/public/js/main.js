@@ -57,12 +57,12 @@ function getRandomPost() {
 
   // while random number mathes an item in the array, get a new random number
   // How to check is a value is in an array http://stackoverflow.com/questions/7378228/check-if-an-element-is-present-in-an-array Stack Overflow MIT License
-  while (numbersUsed.includes(randomNumber2)) {
+  if (numbersUsed.includes(randomNumber2) === true) {
     var randomNumber2 = randomNumber(Posts.length);
   }
 
   // Sets random quote and pushes random number to numbersUsed array
-  
+
   document.querySelectorAll(".post-title")[1].innerHTML = Posts[randomNumber2].title;
   document.querySelectorAll(".post-subtitle")[1].innerHTML = Posts[randomNumber2].subtitle;
   numbersUsed.push(randomNumber2);
