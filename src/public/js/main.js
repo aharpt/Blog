@@ -33,65 +33,35 @@ var Posts = [
 
 // get random post
 
-function randomNumber(highNumber) {
+var randomNumber = function(highNumber) {
   var randomNumber = Math.floor(Math.random() * highNumber);
   return randomNumber;
-}
+};
 
-function getRandomPost() {
+var numbersUsed = [];
 
-  // getting first random quote
-
-  var randomNumber1 = randomNumber(Posts.length);
-  var post1Title = document.getElementsByClassName("post-title")[0].innerHTML = Posts[randomNumber1].title;
-  var post1SubTitle = document.getElementsByClassName("post-subtitle")[0].innerHTML = Posts[randomNumber1].subtitle;
-
-  // keeping track of numbers already used
-
-  var numbersUsed = [];
-  numbersUsed.push(randomNumber1);
-
-  // random quote 2
+var randomPost = function(index) {
 
   var randomNumber2 = randomNumber(Posts.length);
 
-  // while random number mathes an item in the array, get a new random number
-  // How to check is a value is in an array http://stackoverflow.com/questions/7378228/check-if-an-element-is-present-in-an-array Stack Overflow MIT License
-  if (numbersUsed.includes(randomNumber2) === true) {
+  while (numbersUsed.includes(randomNumber2)) {
     var randomNumber2 = randomNumber(Posts.length);
   }
 
-  // Sets random quote and pushes random number to numbersUsed array
-
-  document.querySelectorAll(".post-title")[1].innerHTML = Posts[randomNumber2].title;
-  document.querySelectorAll(".post-subtitle")[1].innerHTML = Posts[randomNumber2].subtitle;
+  document.querySelectorAll(".post-title")[index].innerHTML = Posts[randomNumber2].title;
+  if (document.querySelectorAll(".post-subtitle")[index]) {
+    document.querySelectorAll(".post-subtitle")[index].innerHTML = Posts[randomNumber2].subtitle;
+  }
   numbersUsed.push(randomNumber2);
-
-  // random quote 3
-
-  var randomNumber3 = randomNumber(Posts.length);
-
-  while (numbersUsed.includes(randomNumber3)) {
-    var randomNumber3 = randomNumber(Posts.length);
-  }
-
-  document.querySelectorAll(".post-title")[2].innerHTML = Posts[randomNumber3].title;
-  document.querySelectorAll(".post-subtitle")[2].innerHTML = Posts[randomNumber3].subtitle;
-  numbersUsed.push(randomNumber3);
+};
 
 
-  // random quote 4
-
-  var randomNumber4 = randomNumber(Posts.length);
-
-  while (numbersUsed.includes(randomNumber4)) {
-    var randomNumber4 = randomNumber(Posts.length);
-  }
-
-
-  document.querySelectorAll(".post-title")[3].innerHTML = Posts[randomNumber4].title;
-  document.querySelectorAll(".post-title")[3].innerHTML = Posts[randomNumber4].subtitle;
-  numbersUsed.push(randomNumber4);
-}
+var getRandomPost = function() {
+  randomPost(0);
+  randomPost(1);
+  randomPost(2);
+  randomPost(3);
+  
+};
 
 getRandomPost();
